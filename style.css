@@ -4,3 +4,77 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Poppins", serif;
+    color: hsl(234, 12%, 34%);
+}
+
+header {
+    font-size: clamp(0.75rem, 0.5rem + 1.25vw, 2.5rem);
+    text-align: center;
+    padding: min(2rem, 2%);
+}
+
+header h1 .thin-h1 {
+    color: hsl(212, 6%, 44%);
+    font-weight: 200;
+}
+
+header p {
+    font-weight: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+main .box {
+    width: 90%;
+    max-width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: min(2em, 8%);
+    box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.30);
+    border-radius: 6px;
+}
+
+main #supervisor { border-top: 3.5px solid hsl(180, 62%, 55%);}
+main #builder    { border-top: 3.5px solid hsl(0, 78%, 62%);   }
+main #karma      { border-top: 3.5px solid hsl(34, 97%, 64%);  }
+main #calculator { border-top: 3.5px solid hsl(212, 86%, 64%); }
+
+main .box h2 {
+    margin-bottom: 0.5rem;
+}
+
+main .box img {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: 1rem;
+}
+
+main .box p {
+    color: hsl(212, 6%, 44%);
+}
+
+@media (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:0;
+    }
+    
+    main #supervisor {
+        
+    }
+
+    main #calculator {
+        
+        justify-self: baseline;
+    }
+}
