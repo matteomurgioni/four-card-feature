@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    font-size: clamp(0.75rem, 0.5rem + 1.25vw, 2.5rem);
+    font-size: clamp(1rem, 0.908rem + 0.461vw, 1.5rem);
     text-align: center;
     padding: min(2rem, 2%);
 }
@@ -70,12 +70,15 @@ footer {
     main {
         margin-left: auto;
         margin-right: auto;
-        width: 60vw;
+        width: fit-content;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         place-content: center;
-        align-items: center;
-        justify-items: center;
+    }
+
+    main .box {
+        width: 100%;
+        max-width: none;
     }
 
     main #karma {
