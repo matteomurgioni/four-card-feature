@@ -7,6 +7,9 @@
 body {
     font-family: "Poppins", serif;
     color: hsl(234, 12%, 34%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -29,12 +32,14 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
+    height: 70%;
+    padding: 3%;
 }
 
 main .box {
     width: 90%;
     max-width: 320px;
-
+    font-size: clamp(1rem, 0.821rem + 0.373vw, 1.3rem);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -64,6 +69,7 @@ main .box p {
 
 footer {
     margin-top: auto;
+    font-size: clamp(1rem, 0.816rem + 0.922vw, 2rem);
 }
 
 @media (min-width: 1024px) {
@@ -72,7 +78,7 @@ footer {
         margin-right: auto;
         width: fit-content;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr !important;
         place-content: center;
     }
 
@@ -94,4 +100,19 @@ footer {
     main #calculator {
         transform: translateY(50%);
     }
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        align-items: stretch ;
+    }
+
+    main .box {
+        width: 100%;
+        max-width: none;
+    }
+    
 }
